@@ -169,6 +169,7 @@ void SYSCTRL_APBPeriphResetCmd(uint32_t SYSCTRL_APBPeriph, FunctionalState NewSt
     }
 }
 
+#if 0
 __STATIC_INLINE __ASM void SYSCTRL_Sleep(void)
 {
 	CPSID i;
@@ -212,6 +213,7 @@ void SYSCTRL_EnterSleep(SleepMode_TypeDef SleepMode)
 	}
 }
 
+#endif
 /**
   * @brief  Select System clock source
   * @param  source_select£ºSystem clock source value¡£
