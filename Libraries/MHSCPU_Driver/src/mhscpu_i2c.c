@@ -8,6 +8,7 @@
 
 /* Include ------------------------------------------------------------------*/
 #include "mhscpu_i2c.h"
+#include "mhscpu_sysctrl.h"
 
 #define I2C_SPEED_STANDARD_MAX_FREQ							(100000)
 #define I2C_SPEED_FAST_MAX_FREQ								(400000)

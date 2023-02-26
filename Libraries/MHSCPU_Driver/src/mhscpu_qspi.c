@@ -13,6 +13,7 @@
 #include "mhscpu_cache.h"
 #include "mhscpu_qspi.h"
 #include "mhscpu_dma.h"
+#include "mhscpu_sysctrl.h"
 
 #if (ENABLE_CACHE_AES)
 #include "mh_aes.h"
