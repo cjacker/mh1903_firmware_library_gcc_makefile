@@ -165,22 +165,8 @@ $(BUILD_DIR):
 #######################################
 # program
 #######################################
-program_pyocd:
-	pyocd erase -c -t hc32l110 --config pyocd.yaml
-	pyocd load build/$(TARGET).hex -t hc32l110 --config pyocd.yaml
-
-program_openocd:
-	openocd -f /usr/share/openocd/scripts/interface/cmsis-dap.cfg -f /usr/share/openocd/scripts/target/hc32l110.cfg -c "program build/$(TARGET).hex verify reset exit" 
-
-#######################################
-# debug
-#######################################
-debug_pyocd:
-	pyocd-gdbserver -t hc32l110 --config pyocd.yaml
-
-debug_openocd:
-	openocd -f /usr/share/openocd/scripts/interface/cmsis-dap.cfg -f /usr/share/openocd/scripts/target/hc32l110.cfg 
-
+program: $(BUILD_DIR)/$(TARGET).bin
+	air105-uploader /dev/ttyUSB0 build/${TARGET}.bin
 
 #######################################
 # clean up

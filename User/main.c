@@ -27,10 +27,10 @@ int main(void)
     {
         GPIO_ResetBits(GPIOD, GPIO_Pin_14|GPIO_Pin_15);
         GPIO_ResetBits(GPIOC, GPIO_Pin_3);
-        Delay_ms(1000);
+        Delay_ms(200);
         GPIO_SetBits(GPIOD, GPIO_Pin_14|GPIO_Pin_15);
         GPIO_SetBits(GPIOC, GPIO_Pin_3);
-        Delay_ms(1000);
+        Delay_ms(200);
     }
 }
 
