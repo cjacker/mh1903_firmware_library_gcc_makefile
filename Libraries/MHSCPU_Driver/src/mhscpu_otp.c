@@ -8,7 +8,7 @@
 
 /* Include ------------------------------------------------------------------*/
 #include "mhscpu_otp.h"
-
+#include "mhscpu_sysctrl.h"
 
 #define OTP_DONE_FLAG               BIT(0)
 #define OTP_START                   BIT(0)

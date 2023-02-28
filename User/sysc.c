@@ -1,5 +1,7 @@
 #include "mhscpu.h"
 #include "mhscpu_sysctrl.h"
+#include "mhscpu_qspi.h"
+
 #include "sysc.h"
 
 ///-------------------------------------------------------------------------------------------------

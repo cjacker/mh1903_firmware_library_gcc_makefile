@@ -8,7 +8,7 @@
 
 /* Include ------------------------------------------------------------------*/
 #include "mhscpu_gpio.h"
-
+#include "mhscpu_sysctrl.h"
 
 /* Private variables --------------------------------------------------------*/	
 static volatile uint16_t GPIO_OD_Mark[GPIO_GROUP_NUM] = {0};

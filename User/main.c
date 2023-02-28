@@ -16,11 +16,20 @@ int main(void)
     gpio.GPIO_Remap = GPIO_Remap_1;
     GPIO_Init(GPIOD, &gpio);
 
+    GPIO_InitTypeDef gpio2;
+    gpio.GPIO_Pin = GPIO_Pin_3;
+    gpio.GPIO_Mode = GPIO_Mode_Out_PP;
+    gpio.GPIO_Remap = GPIO_Remap_1;
+    GPIO_Init(GPIOC, &gpio);
+
+
     while (1)
     {
         GPIO_ResetBits(GPIOD, GPIO_Pin_14|GPIO_Pin_15);
+        GPIO_ResetBits(GPIOC, GPIO_Pin_3);
         Delay_ms(1000);
         GPIO_SetBits(GPIOD, GPIO_Pin_14|GPIO_Pin_15);
+        GPIO_SetBits(GPIOC, GPIO_Pin_3);
         Delay_ms(1000);
     }
 }

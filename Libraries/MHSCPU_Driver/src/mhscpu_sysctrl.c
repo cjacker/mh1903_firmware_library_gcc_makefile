@@ -7,6 +7,7 @@
  *****************************************************************************/  
 
 /* Includes -----------------------------------------------------------------*/
+#include <string.h>
 #include "mhscpu_sysctrl.h"
 
 /* Exported functions -------------------------------------------------------*/	
@@ -212,7 +213,6 @@ void SYSCTRL_EnterSleep(SleepMode_TypeDef SleepMode)
 		TRNG->RNG_ANA = rng;
 	}
 }
-
 #endif
 /**
   * @brief  Select System clock source

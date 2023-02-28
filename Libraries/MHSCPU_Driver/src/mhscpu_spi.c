@@ -8,7 +8,7 @@
  
 /* Include ------------------------------------------------------------------*/
 #include "mhscpu_spi.h"
-
+#include "mhscpu_sysctrl.h"
 
 /* Exported functions -------------------------------------------------------*/
 static void SPI_MasterSlaveModeSet(SPI_TypeDef *SPIx);
