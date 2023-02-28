@@ -19,3 +19,5 @@ To flash, since Luat AIR105 did not export SWD interface, you need use UART ISP 
 For other AIR105 board with SWD interface, you could use JLink, DAPLink to program.
 
 AIR105 devboard and pinout:
+
+<img src="https://raw.githubusercontent.com/cjacker/mh1903_firmware_library_gcc_makefile/main/pinout.png" />
