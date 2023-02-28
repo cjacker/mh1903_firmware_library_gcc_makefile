@@ -186,6 +186,23 @@ __STATIC_INLINE __ASM void SYSCTRL_Sleep(void)
 	CPSIE i;
 	BX LR;
 }
+#endif
+
+// re-write function
+__attribute__( ( always_inline ) ) __STATIC_INLINE void SYSCTRL_Sleep(void)
+{
+	__disable_irq();
+	__NOP();	
+	__NOP();	
+	__NOP();	
+	__NOP();
+	__WFI();
+	__NOP();	
+	__NOP();	
+	__NOP();	
+	__NOP();
+	__enable_irq();	
+}	
 
 /**
   * @brief  Enter low power mode
@@ -213,7 +230,7 @@ void SYSCTRL_EnterSleep(SleepMode_TypeDef SleepMode)
 		TRNG->RNG_ANA = rng;
 	}
 }
-#endif
+
 /**
   * @brief  Select System clock source
   * @param  source_select£ºSystem clock source value¡£
