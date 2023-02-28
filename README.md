@@ -17,3 +17,5 @@ To build, type `make`.
 To flash, since Luat AIR105 did not export SWD interface, you need use UART ISP mode with [air105-uploader](https://github.com/racerxdl/air105-uploader) to program Luat AIR105 devboard.
 
 For other AIR105 board with SWD interface, you could use JLink, DAPLink to program.
+
+AIR105 devboard and pinout:
